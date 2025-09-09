@@ -1,0 +1,289 @@
+/* ====================== THEME ====================== */
+:root{
+  --bg:#0b0f14; --surface:#0f1520; --card:#111a27;
+  --text:#e6edf3; --muted:#9fb1c3;
+  --accent:#0d3b66; --accent-2:#145ea8;
+
+  /* brand */
+  --yt:#b91c1c; --yt-dark:#7f1d1d;
+  --tt-black:#0b0b0b; --tt-cyan:#25F4EE; --tt-pink:#FE2C55;
+  --tipply:#16a34a; --tipply-dark:#065f46;
+  --discord:#2f3136; --discord-dark:#232428;
+}
+
+/* ====================== BASE ====================== */
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background: radial-gradient(1200px 600px at 70% -10%, #0c1a2b 0%, transparent 60%), var(--bg);
+  color:var(--text); line-height:1.6;
+}
+
+.container{ width:min(1100px,92vw); margin-inline:auto; }
+.section{ padding:72px 0; }
+
+h1,h2{ line-height:1.2; letter-spacing:.2px; margin:0 0 12px; }
+h1{ font-size:clamp(32px,3.6vw,52px); font-weight:800; }
+h2{ font-size:clamp(24px,2.4vw,34px); font-weight:700; }
+.lead{ color:var(--muted); max-width:60ch; margin-bottom:24px; }
+
+a{ color:inherit; }
+
+/* ====================== HEADER ====================== */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:blur(8px);
+  background: color-mix(in oklab, var(--bg) 75%, transparent);
+  border-bottom:1px solid color-mix(in oklab, var(--accent) 30%, transparent);
+}
+.header-inner{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+.logo{ display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:var(--text); font-weight:800; }
+.logo-dot{ width:14px; height:14px; border-radius:999px; background: radial-gradient(circle at 30% 30%, var(--accent-2), var(--accent)); box-shadow:0 0 18px color-mix(in oklab, var(--accent-2) 60%, transparent); }
+.logo-text{ font-size:18px; }
+
+.nav{ display:flex; gap:12px; flex-wrap:wrap; }
+.nav-link{
+  display:inline-block; padding:10px 14px; border-radius:10px;
+  text-decoration:none; font-weight:600; color:var(--text);
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+  background: linear-gradient(180deg, transparent, color-mix(in oklab, var(--accent) 16%, transparent));
+}
+.nav-link:hover{ transform:translateY(-1px) scale(1.03); box-shadow:0 6px 24px color-mix(in oklab, var(--accent-2) 18%, transparent); }
+
+.lang-switch{ display:flex; gap:6px; }
+.lang-btn{
+  border:1px solid color-mix(in oklab, var(--accent) 35%, transparent);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, transparent), var(--card));
+  color:var(--text); padding:8px 10px; border-radius:10px; cursor:pointer; font-weight:700;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.lang-btn:hover{ transform:translateY(-1px); box-shadow:0 10px 24px color-mix(in oklab, var(--accent-2) 18%, transparent); }
+
+/* ====================== HERO + BUTTON ====================== */
+.hero{
+  padding:96px 0 72px;
+  background:
+    radial-gradient(700px 400px at 10% -10%, color-mix(in oklab, var(--accent-2) 10%, transparent), transparent 60%),
+    linear-gradient(180deg, transparent 0%, color-mix(in oklab, #000 10%, transparent) 100%);
+}
+.btn{
+  display:inline-block; padding:12px 18px; border-radius:12px; font-weight:700; text-decoration:none; color:white;
+  background: linear-gradient(180deg, var(--accent-2), var(--accent));
+  box-shadow:0 10px 30px color-mix(in oklab, var(--accent-2) 25%, transparent);
+  transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.btn:hover{ transform:translateY(-2px) scale(1.03); filter:brightness(1.05); }
+
+/* ====================== TABS ====================== */
+.tabs input[type="radio"]{ display:none; }
+.tabs-controls{ display:flex; gap:10px; flex-wrap:wrap; margin:16px 0 22px; }
+.tab{
+  cursor:pointer; user-select:none; padding:10px 14px; border-radius:12px; font-weight:700; letter-spacing:.2px;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 90%, transparent), var(--card));
+  border:1px solid color-mix(in oklab, var(--accent) 35%, transparent); color:var(--text);
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+}
+.tab:hover{ transform:translateY(-1px); box-shadow:0 10px 24px color-mix(in oklab, var(--accent-2) 18%, transparent); border-color:color-mix(in oklab, var(--accent-2) 55%, transparent); }
+
+.tabs-content{ position:relative; }
+.tab-panel{
+  display:none; background: linear-gradient(180deg, color-mix(in oklab, var(--card) 94%, transparent), var(--card));
+  border:1px solid color-mix(in oklab, var(--accent) 25%, transparent);
+  border-radius:16px; padding:18px;
+}
+
+/* aktywne etykiety */
+#tab-miniatury:checked ~ .tabs-controls label[for="tab-miniatury"],
+#tab-bannery:checked   ~ .tabs-controls label[for="tab-bannery"],
+#tab-inne:checked      ~ .tabs-controls label[for="tab-inne"],
+#tab-projekt4:checked  ~ .tabs-controls label[for="tab-projekt4"]{
+  background: linear-gradient(180deg, color-mix(in oklab, var(--accent-2) 20%, var(--card)), color-mix(in oklab, var(--accent) 30%, var(--card)));
+  border-color:color-mix(in oklab, var(--accent-2) 60%, transparent);
+  box-shadow:0 8px 26px color-mix(in oklab, var(--accent-2) 22%, transparent);
+}
+
+/* treść aktywnej zakładki */
+#tab-miniatury:checked ~ .tabs-content .panel-miniatury{ display:block; }
+#tab-bannery:checked   ~ .tabs-content .panel-bannery{ display:block; }
+#tab-inne:checked      ~ .tabs-content .panel-inne{ display:block; }
+#tab-projekt4:checked  ~ .tabs-content .panel-projekt4{ display:block; }
+
+/* ====================== MEDIA GRID (zdjęcia + filmy) ====================== */
+.media-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap:20px;
+}
+.media-card{
+  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 94%, transparent), var(--card));
+  border:1px solid color-mix(in oklab, var(--accent) 25%, transparent);
+  border-radius:18px; overflow:hidden;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, filter .25s ease;
+}
+.media-card:hover{
+  transform: translateY(-2px) scale(1.02);
+  border-color: color-mix(in oklab, var(--accent-2) 60%, transparent);
+  box-shadow: 0 16px 40px color-mix(in oklab, var(--accent-2) 22%, transparent);
+}
+.media-img img{
+  width:100%; display:block; object-fit:cover; aspect-ratio:16/9;
+}
+.media-video{ padding:12px; }
+.media-video .video-embed{
+  position:relative; width:100%; aspect-ratio:16/9; overflow:hidden;
+  border-radius:12px; background:#0e1622;
+  border:1px solid color-mix(in oklab, var(--accent) 25%, transparent);
+}
+.video-frame{ position:absolute; inset:0; width:100%; height:100%; border:0; display:block; }
+.media-caption{ display:block; margin-top:8px; font-size:14px; color:var(--muted); font-weight:700; }
+
+/* ====================== CTA do gry ====================== */
+.game-actions{ display:flex; gap:12px; margin:16px 0 0; }
+.game-btn{
+  display:inline-block; padding:12px 16px; border-radius:12px; font-weight:800; text-decoration:none; color:#fff;
+  background: linear-gradient(180deg, var(--accent-2), var(--accent));
+  border:1px solid color-mix(in oklab, var(--accent-2) 60%, transparent);
+  box-shadow:0 10px 28px color-mix(in oklab, var(--accent-2) 22%, transparent);
+  transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.game-btn:hover{ transform:translateY(-2px) scale(1.02); filter:brightness(1.05); }
+
+/* ====================== SOCIAL CARDS ====================== */
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  gap:20px; margin-top:16px;
+}
+.social-card{
+  display:flex; gap:16px; align-items:center; text-decoration:none; color:var(--text);
+  padding:18px; border-radius:18px;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, transparent), var(--card));
+  border:1px solid color-mix(in oklab, var(--accent) 25%, transparent);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease, filter .2s ease;
+  cursor:pointer; overflow:hidden;
+  /* aby liczniki skalujeły się względem szerokości karty */
+  container-type:inline-size;
+}
+.social-card:hover{ transform:translateY(-2px) scale(1.02); box-shadow:0 10px 26px rgba(0,0,0,.25); }
+
+.social-avatar{
+  width:64px; height:64px; border-radius:14px; object-fit:cover;
+  border:1px solid transparent;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+
+/* treść */
+.social-body h3{ margin:0 0 6px; font-size:20px; font-weight:800; }
+.social-body p{ margin:0 6px 8px 0; color:var(--muted); font-size:15px; }
+.social-meta{
+  display:flex; align-items:center; gap:12px;
+  justify-content:space-between; width:100%;
+}
+.badge{
+  display:inline-flex; align-items:center; height:40px; padding:0 16px;
+  border-radius:999px; font-weight:800; font-size:14px; letter-spacing:.2px;
+  color:#fff; border:1px solid transparent;
+  background: linear-gradient(180deg, var(--accent-2), var(--accent));
+  box-shadow:none; /* żadnych niebieskich ringów */
+}
+
+/* liczniki – rosną z kartą, nie wychodzą */
+#yt-count, #tt-count{
+  font-weight:900; line-height:1; color:var(--text);
+  white-space:nowrap; font-variant-numeric:tabular-nums;
+  /* fallback + wersja w oparciu o szerokość karty */
+  font-size:clamp(22px, 1rem + 1vw, 36px);
+  font-size:clamp(22px, 9cqi, 36px);
+}
+
+/* ====================== BRAND VARIANTS ====================== */
+.social-yt{
+  background:
+    radial-gradient(600px 140px at 15% -30%, color-mix(in oklab, var(--yt) 35%, transparent), transparent 65%),
+    linear-gradient(180deg, color-mix(in oklab, var(--yt-dark) 35%, #0b0b0b), #0c0c0c);
+  border-color: color-mix(in oklab, var(--yt) 55%, transparent);
+}
+.social-yt:hover{ box-shadow: 0 18px 46px color-mix(in oklab, var(--yt) 35%, transparent); }
+.social-yt .badge{ background: linear-gradient(180deg, var(--yt), var(--yt-dark)); border-color: color-mix(in oklab, var(--yt) 75%, transparent); }
+.social-yt .social-avatar{ border-color: color-mix(in oklab, var(--yt) 70%, transparent); box-shadow: 0 8px 22px color-mix(in oklab, var(--yt) 26%, transparent); }
+.social-yt:hover .social-avatar{ border-color: color-mix(in oklab, var(--yt) 90%, transparent); box-shadow: 0 14px 34px color-mix(in oklab, var(--yt) 36%, transparent); }
+
+.social-tt{
+  background:
+    linear-gradient(135deg, color-mix(in oklab, var(--tt-cyan) 18%, transparent), transparent 42%),
+    linear-gradient(315deg, color-mix(in oklab, var(--tt-pink) 22%, transparent), transparent 48%),
+    linear-gradient(180deg, #0a0a0a, #141414);
+  border-color:#262626;
+}
+.social-tt:hover{
+  box-shadow: 0 22px 56px color-mix(in oklab, var(--tt-cyan) 28%, transparent),
+              0 18px 46px color-mix(in oklab, var(--tt-pink) 24%, transparent);
+}
+.social-tt .badge{
+  background:
+    linear-gradient(135deg, var(--tt-cyan), var(--tt-pink));
+  border-color: color-mix(in oklab, var(--tt-cyan) 60%, transparent);
+}
+.social-tt .social-avatar{
+  border-color: color-mix(in oklab, var(--tt-cyan) 55%, transparent);
+  box-shadow:0 8px 20px color-mix(in oklab, var(--tt-cyan) 20%, transparent),
+             0 6px 16px color-mix(in oklab, var(--tt-pink) 18%, transparent);
+}
+.social-tt:hover .social-avatar{
+  border-color: color-mix(in oklab, var(--tt-cyan) 78%, transparent);
+  box-shadow:0 16px 38px color-mix(in oklab, var(--tt-cyan) 30%, transparent),
+             0 14px 32px color-mix(in oklab, var(--tt-pink) 24%, transparent);
+}
+
+.social-tipply{
+  background:
+    radial-gradient(500px 160px at 20% -40%, color-mix(in oklab, var(--tipply) 28%, transparent), transparent 65%),
+    linear-gradient(180deg, color-mix(in oklab, var(--tipply-dark) 40%, #0e1a14), #0c1712);
+  border-color: color-mix(in oklab, var(--tipply) 55%, transparent);
+}
+.social-tipply:hover{ box-shadow: 0 18px 46px color-mix(in oklab, var(--tipply) 32%, transparent); }
+.social-tipply .badge{ background: linear-gradient(180deg, var(--tipply), var(--tipply-dark)); border-color: color-mix(in oklab, var(--tipply) 70%, transparent); }
+.social-tipply .social-avatar{ border-color: color-mix(in oklab, var(--tipply) 65%, transparent); box-shadow: 0 8px 22px color-mix(in oklab, var(--tipply) 26%, transparent); }
+.social-tipply:hover .social-avatar{ border-color: color-mix(in oklab, var(--tipply) 88%, transparent); box-shadow: 0 16px 40px color-mix(in oklab, var(--tipply) 34%, transparent); }
+
+.social-discord{
+  background: linear-gradient(180deg, var(--discord), var(--discord-dark));
+  border-color:#3b3d44;
+}
+.social-discord:hover{ box-shadow:0 18px 46px rgba(0,0,0,.35); }
+.social-discord .badge{ background: linear-gradient(180deg, #5865F2, #404EED); border-color:#5865F2; }
+.social-discord .social-avatar{ border-color: color-mix(in oklab, #5865F2 55%, transparent); box-shadow: 0 8px 22px color-mix(in oklab, #5865F2 24%, transparent); }
+.social-discord:hover .social-avatar{ border-color: color-mix(in oklab, #5865F2 85%, transparent); box-shadow: 0 16px 40px color-mix(in oklab, #5865F2 32%, transparent); }
+
+/* ====================== ABOUT + FOOTER ====================== */
+.about .about-card{
+  display:grid; grid-template-columns:120px 1fr; gap:16px;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, transparent), var(--card));
+  border:1px solid color-mix(in oklab, var(--accent) 25%, transparent);
+  border-radius:16px; padding:16px;
+}
+.about-avatar{
+  width:120px; height:120px; border-radius:16px; object-fit:cover;
+  border:1px solid color-mix(in oklab, var(--accent) 30%, transparent);
+  box-shadow:0 8px 22px color-mix(in oklab, var(--accent-2) 22%, transparent);
+}
+.about-body p{ color:var(--muted); }
+
+.site-footer{
+  border-top:1px solid color-mix(in oklab, var(--accent) 25%, transparent);
+  padding:28px 0; color:var(--muted);
+  background: linear-gradient(180deg, transparent, color-mix(in oklab, #000 8%, transparent));
+  text-align:center;
+}
+
+/* ====================== MISC ====================== */
+.hint{ color:var(--muted); margin-top:14px; font-size:14px; }
+code{ background:#0e1622; padding:2px 6px; border-radius:6px; border:1px solid color-mix(in oklab, var(--accent) 25%, transparent); }
+@media (prefers-reduced-motion:reduce){ *{ transition:none !important; } }
+
+@media (max-width:640px){
+  .media-grid{ grid-template-columns:1fr; }
+  .social-grid{ grid-template-columns:1fr; }
+}

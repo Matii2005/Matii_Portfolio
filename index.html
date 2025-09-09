@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matii||Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styless.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Strona główna">
+        <span class="logo-dot"></span>
+        <span class="logo-text" data-i18n="logo">Portfolio</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#o-mnie" class="nav-link" data-i18n="nav.about">O mnie</a>
+        <a href="#projekty" class="nav-link" data-i18n="nav.projects">Projekty</a>
+        <a href="#linki" class="nav-link" data-i18n="nav.links">Social Media i Wsparcie</a>
+      </nav>
+
+      <div class="lang-switch">
+        <button class="lang-btn" data-set-lang="en">EN</button>
+        <button class="lang-btn" data-set-lang="pl">PL</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="start" class="hero">
+    <div class="container">
+      <h1 data-i18n="hero.title">Matii</h1>
+      <p class="lead" data-i18n="hero.lead">
+        Cześć jestem Matii i to moje portfolio
+      </p>
+      <a href="#projekty" class="btn" data-i18n="hero.cta">Zobacz projekty</a>
+    </div>
+  </main>
+
+  <!-- O MNIE -->
+  <section id="o-mnie" class="section">
+    <div class="container about">
+      <div class="about-card">
+        <img class="about-avatar" src="mojeprofilowe.jpg" alt="Moje zdjęcie profilowe">
+        <div class="about-body">
+          <h2 data-i18n="about.title">O mnie</h2>
+          <p data-i18n="about.text">
+            Cześć jestem Mateusz mam 20 lat pochodze z Polski.
+            Zajmuje sie tworzeniem map w robloxsie oraz prostym modelowaniem.
+            Moim hobby jest montowanie filmów mam kanał na youtubie i tiktoku do którego link jest na dole.
+            Chetnie zrobie dla ciebie mape do twojej gry w robloxsie. 
+            Moge tez zrobić dla ciebie filmik promocyjny twojej gry albo zmontowac krótki filmik promocyjny.
+            Jeśli jesteś zainteresowany współpracą pisz do mnie na discordzie.
+          </p>
+          <a href="#linki" class="btn" data-i18n="about.cta">Skontaktuj się</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJEKTY -->
+  <section id="projekty" class="section">
+    <div class="container">
+      <h2 data-i18n="projects.title">Projekty</h2>
+
+      <div class="tabs">
+        <input type="radio" name="taby" id="tab-projekt4" checked>
+        <input type="radio" name="taby" id="tab-miniatury">
+        <input type="radio" name="taby" id="tab-bannery">
+        <input type="radio" name="taby" id="tab-inne">
+
+        <div class="tabs-controls">
+          <label class="tab" for="tab-projekt4" data-i18n="projects.fourth">My Map Projects </label>
+          <label class="tab" for="tab-miniatury" data-i18n="projects.thumbs">Ball Together(Sold)</label>
+          <label class="tab" for="tab-bannery" data-i18n="projects.banners">Steal a SquidGame</label>
+          <label class="tab" for="tab-inne" data-i18n="projects.other">Balloon 2 Players Obby - (Unfinished)</label>
+        </div>
+
+        <div class="tabs-content">
+          <!-- ===== Moje Projekty ===== -->
+          <div class="tab-panel panel-projekt4">
+            <div class="media-grid">
+              <a class="media-card media-img" href="OTHER2.png" target="_blank" title="Screen A">
+                <img src="OTHER2.png" alt="Screen A">
+              </a>
+              <a class="media-card media-img" href="OTHER3.png" target="_blank" title="Screen B">
+                <img src="OTHER3.png" alt="Screen B">
+              </a>
+              <a class="media-card media-img" href="OTHER4.png" target="_blank" title="Screen C">
+                <img src="OTHER4.png" alt="Screen C">
+              </a>
+            </div>
+          </div>
+
+          <!-- ===== Ball Together ===== -->
+          <div class="tab-panel panel-miniatury">
+            <div class="media-grid">
+              <a class="media-card media-img" href="Ikonka.png" target="_blank" title="Screen 1">
+                <img src="Ikonka.png" alt="Screen 1">
+              </a>
+              <a class="media-card media-img" href="ball1.png" target="_blank" title="Screen 2">
+                <img src="ball1.png" alt="Screen 2">
+              </a>
+              <a class="media-card media-img" href="ball2.png" target="_blank" title="Screen 3">
+                <img src="ball2.png" alt="Screen 3">
+              </a>
+
+              <div class="media-card media-video">
+                <div class="video-embed" data-mp4="ball.mp4"></div>
+              </div>
+            </div>
+
+            <div class="game-actions">
+              <a class="game-btn" href="https://www.roblox.com/games/116752486537781/Ball-Together-2-Players-Obby-Ball-Obby" target="_blank" rel="noopener" data-i18n="projects.play">Zagraj w grę</a>
+            </div>
+          </div>
+
+          <!-- ===== Steal a SquidGame ===== -->
+          <div class="tab-panel panel-bannery">
+            <div class="media-grid">
+              <a class="media-card media-img" href="Steal.png" target="_blank" title="Banner 1">
+                <img src="Steal.png" alt="Banner 1">
+              </a>
+              <a class="media-card media-img" href="steal2.png" target="_blank" title="Banner 2">
+                <img src="steal2.png" alt="Banner 2">
+              </a>
+
+              <div class="media-card media-video">
+                <div class="video-embed" data-mp4="squid.mp4"></div>
+              </div>
+            </div>
+
+            <div class="game-actions">
+              <a class="game-btn" href="https://www.roblox.com/games/88778761101494/Steal-a-Squid-Game" target="_blank" rel="noopener" data-i18n="projects.play">Zagraj w grę</a>
+            </div>
+          </div>
+
+          <!-- ===== Balloon 2 players obby ===== -->
+          <div class="tab-panel panel-inne">
+            <div class="media-grid">
+              <a class="media-card media-img" href="Ballon1.png" target="_blank" title="Inny projekt 1">
+                <img src="Ballon1.png" alt="Inny projekt 1">
+              </a>
+              <a class="media-card media-img" href="Ballon2.png" target="_blank" title="Inny projekt 2">
+                <img src="Ballon2.png" alt="Inny projekt 2">
+              </a>
+
+              <div class="media-card media-video">
+                <div class="video-embed" data-mp4="balloon.mp4"></div>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINKI / SOCIALE -->
+  <section id="linki" class="section">
+    <div class="container">
+      <h2 data-i18n="links.title">Linki - Kliknij aby przejść dalej</h2>
+
+      <div class="social-grid">
+        <!-- YOUTUBE -->
+        <a class="social-card social-yt" href="https://www.youtube.com/@MatiiRobloxPL" target="_blank" rel="noopener">
+          <img class="social-avatar" src="PFP.png" alt="YouTube avatar">
+          <div class="social-body">
+            <h3>YouTube</h3>
+            <p class="muted" data-i18n="links.youtubeDesc">MatiiRoblox.</p>
+            <div class="social-meta">
+              <span class="social-chip brand-yt" data-i18n="links.subs">Subskrybcje</span>
+              <strong id="yt-count" data-count="0">0</strong>
+            </div>
+          </div>
+        </a>
+
+        <!-- TIKTOK -->
+        <a class="social-card social-tt" href="https://www.tiktok.com/@matii2005_" target="_blank" rel="noopener">
+          <img class="social-avatar" src="MatiiIMaja.jpg" alt="TikTok avatar">
+          <div class="social-body">
+            <h3>TikTok</h3>
+            <p class="muted" data-i18n="links.tiktokDesc">matii2005_</p>
+            <div class="social-meta">
+              <span class="social-chip brand-tt" data-i18n="links.followers">Obserwujący</span>
+              <strong id="tt-count" data-count="0">0</strong>
+            </div>
+          </div>
+        </a>
+
+        <!-- TIPPLY -->
+        <a class="social-card social-tipply" href="https://tipply.pl/@matii2005" target="_blank" rel="noopener">
+          <div class="social-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+              <path d="M12 2a5 5 0 0 1 5 5c0 3.9-5 8-5 8s-5-4.1-5-8a5 5 0 0 1 5-5zm0 7.2a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4z"/>
+            </svg>
+          </div>
+          <div class="social-body">
+            <h3>Tipply</h3>
+            <p class="muted" data-i18n="links.tipplyDesc">Jeśli chcesz mnie wesprzeć – dziękuję!</p>
+            <span class="social-chip brand-tipply" data-i18n="links.support">Wspieram</span>
+          </div>
+        </a>
+
+        <!-- DISCORD -->
+        <a class="social-card social-discord" href="https://discord.com/users/478906746241548298" target="_blank" rel="noopener">
+          <img class="social-avatar" src="Discord.png" alt="Discord avatar">
+          <div class="social-body">
+            <h3>Discord</h3>
+            <p data-i18n="links.discord">Skontaktuj się</p>
+            <div class="social-meta">
+              <span class="social-chip brand-discord">@matii2005</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>  <span id="year"></span> <span data-i18n="footer.name">Matii</span> <span data-i18n="footer.rights"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    // ========= KONFIG =========
+    const WORKER_BASE     = 'https://liczniktiktok.mateuszcichy885.workers.dev'; // <-- jeśli inny, podmień
+    const TIKTOK_USERNAME = 'matii2005_';
+    const YT_CHANNEL_ID   = 'UCnr4wKr4BmBaEsBM_Nb3ZQg';
+
+    // Rok w stopce
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Format liczb (PL/EN)
+    const formatFull = (num, lang) =>
+      new Intl.NumberFormat(lang, { useGrouping: true, maximumFractionDigits: 0 }).format(num);
+
+    function initCounts(){
+      const lang = document.documentElement.dataset.lang || 'pl';
+      ['yt-count', 'tt-count'].forEach(id=>{
+        const el = document.getElementById(id);
+        if(!el) return;
+        const n = Number(el.getAttribute('data-count') || el.textContent.replace(/\D/g,'') || 0);
+        el.textContent = formatFull(n, lang);
+      });
+    }
+
+    // Wideo: MP4/YouTube
+    function initVideos(){
+      document.querySelectorAll('.video-embed').forEach(wrap=>{
+        const mp4    = (wrap.dataset.mp4    || '').trim();
+        const poster = (wrap.dataset.poster || '').trim();
+        const yt     = (wrap.dataset.video  || '').trim();
+
+        if (mp4){
+          wrap.innerHTML = `
+            <video class="video-frame" controls preload="metadata" playsinline ${poster ? `poster="${poster}"` : ''}>
+              <source src="${mp4}" type="video/mp4">
+              Twoja przeglądarka nie wspiera wideo.
+            </video>`;
+          return;
+        }
+        if (yt){
+          const src = yt.replace('watch?v=','embed/').replace('youtu.be/','youtube.com/embed/');
+          wrap.innerHTML = `<iframe class="video-frame" src="${src}" title="Video"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer"></iframe>`;
+        }
+      });
+    }
+
+    // ======= I18N =======
+    const I18N = {
+      pl: {
+        logo:"Portfolio",
+        "nav.about":"O mnie",
+        "nav.projects":"Projekty",
+        "nav.links":"Social Media i Wsparcie",
+        "hero.title":"Matii",
+        "hero.lead":"Cześć jestem Matii i to moje portfolio.",
+        "hero.cta":"Zobacz projekty",
+        "about.title":"O mnie",
+        "about.text":"Cześć jestem Mateusz mam 20 lat pochodze z Polski. Zajmuje sie tworzeniem map w robloxsie oraz prostym modelowaniem. Moim hobby jest montowanie filmów mam kanał na youtubie i tiktoku do którego link jest na dole. Chetnie zrobie dla ciebie mape do twojej gry w robloxsie. Moge tez zrobić dla ciebie filmik promocyjny twojej gry albo zmontowac krótki filmik promocyjny. Jeśli jesteś zainteresowany współpracą pisz do mnie na discordzie.",
+        "about.cta":"Skontaktuj się",
+        "projects.title":"Projekty",
+        "projects.thumbs":"Ball Together - (Sprzedana)",
+        "projects.banners":"Steal a SquidGame",
+        "projects.other":"Balloon 2 Players Obby - (Niedokończona)",
+        "projects.fourth":"Moje projekty map",
+        "projects.play":"Zagraj w grę",
+        "links.title":"Linki - Kliknij aby przejść dalej",
+        "links.youtubeDesc":"MatiiRoblox",
+        "links.tiktokDesc":"matii2005_",
+        "links.tipplyDesc":"Na marzenia",
+        "links.subs":"Subskrypcje",
+        "links.followers":"Obserwujący",
+        "links.support":"Wspieram",
+        "footer.name":"Matii",
+        "footer.rights":"",
+        "links.discord":"Skontaktuj się"
+      },
+      en: {
+        logo:"Portfolio",
+        "nav.about":"About Me",
+        "nav.projects":"Projects",
+        "nav.links":"Social Media & Support",
+        "hero.title":"Matii",
+        "hero.lead":"Hi, I'm Mati and this is my portfolio",
+        "hero.cta":"View projects",
+        "about.title":"About me",
+        "about.text":"Hi, I'm Mateusz, 20 years old, from Poland. I create maps in Roblox and do simple modeling. My hobby is editing videos; I have a YouTube and TikTok channel, the links to which are below. I'd be happy to create a map for your Roblox game. I can also create a promotional video for your game or edit a short promotional video. If you're interested in collaborating, message me on Discord.",
+        "about.cta":"Contact me",
+        "projects.title":"Projects",
+        "projects.thumbs":"Ball Together - (Sold)",
+        "projects.banners":"Steal a SquidGame",
+        "projects.other":"Balloon 2 Players Obby - (Unfinished)",
+        "projects.fourth":"My Map projects",
+        "projects.play":"Play game",
+        "links.title":"Links - Click to continue",
+        "links.youtubeDesc":"MatiiRoblox",
+        "links.tipplyDesc":"For dreams",
+        "links.subs":"Subscribers",
+        "links.followers":"Followers",
+        "links.support":"Support",
+        "footer.name":"Matii",
+        "footer.rights":"",
+        "links.discord":"Contact me"
+      }
+    };
+
+    function applyI18n(lang){
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.dataset.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(I18N[lang] && I18N[lang][key]){
+          el.innerHTML = I18N[lang][key];
+        }
+      });
+      initCounts();
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        applyI18n(btn.dataset.setLang);
+      });
+    });
+
+    // ======= API: YouTube (przez Worker) =======
+    async function fetchYouTubeSubsViaWorker(channelId, base = WORKER_BASE){
+      try{
+        const res = await fetch(`${base}/api/yt?channelId=${encodeURIComponent(channelId)}`, { cache: "no-store" });
+        const data = await res.json();
+        const subs = Number(data.subscribers || 0);
+        if(subs){
+          const el = document.getElementById('yt-count');
+          el.setAttribute('data-count', String(subs));
+          el.textContent = formatFull(subs, document.documentElement.dataset.lang || 'pl');
+        }
+      }catch(e){ /* cicho – zostaje fallback */ }
+    }
+
+    // ======= API: TikTok (przez Worker) =======
+    async function fetchTikTokFollowers(username, base = WORKER_BASE) {
+      try {
+        const res = await fetch(`${base}/api/tt?u=${encodeURIComponent(username)}`, { cache: "no-store" });
+        let data;
+        try { data = await res.json(); }
+        catch { data = {}; }
+        const n = Number(data.followers || 0);
+        if (n > 0) {
+          const el = document.getElementById('tt-count');
+          el.setAttribute('data-count', String(n));
+          el.textContent = formatFull(n, document.documentElement.dataset.lang || 'pl');
+        }
+      } catch (e) { /* zostaje ręczna wartość */ }
+    }
+
+    // ======= Start =======
+    applyI18n(document.documentElement.dataset.lang || 'pl');
+    initVideos();
+    fetchYouTubeSubsViaWorker(YT_CHANNEL_ID);
+    fetchTikTokFollowers(TIKTOK_USERNAME);
+    
+  </script>
+</body>
+</html>
